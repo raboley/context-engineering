@@ -43,6 +43,35 @@
   - 1 failure case test
   - 1 test ensuring new components are properly registered/integrated
 </test-maintenance>
+
+<test-quality-standards>
+<function-structure>
+- NO docstrings on test functions - function names should be self-explanatory
+- NO comments explaining test steps - code should be clear without explanation
+- NO print statements or celebratory output - assertions are sufficient
+</function-structure>
+
+<assertion-requirements>
+- Use descriptive assertion messages with context - explain both what should happen AND what actually happened
+- For comparisons, always show expected vs actual values using f-strings
+- For boolean checks, explain the opposite condition (e.g., "should fetch from API, but was retrieved from cache")
+- Make failure messages informative - include all context needed to understand and fix failures
+- ALWAYS test the end result - verify what the user would see, not just that something didn't crash
+- Test actual behavior - don't assume success, verify the expected outcome occurred
+</assertion-requirements>
+
+<assertion-examples>
+BAD: `assert x == y, "Should be equal"`
+GOOD: `assert x == y, f"Expected {y} but got {x}"`
+
+BAD: `assert success, "Should succeed"`
+GOOD: `assert success, f"Expected operation to succeed but failed: {error_details}"`
+</assertion-examples>
+
+<test-workflow>
+- NO "fire and forget" testing - always validate the actual outcome
+</test-workflow>
+</test-quality-standards>
 </testing-requirements>
 
 <task-completion>
