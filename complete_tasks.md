@@ -1,8 +1,8 @@
 # Contributing Guidelines
 
 <context-requirements>
-- Always read `PLANNING.md` first to understand project architecture, goals, and constraints
-- Check `TASK.md` before starting new tasks - add unlisted tasks with brief description and date
+- Always read `prd-[feature].md` first to understand project architecture, goals, and constraints
+- Check `tasks-.md` before starting new tasks - add unlisted tasks with brief description and date
 - Use consistent naming conventions, file structure, and architecture patterns per `PLANNING.md`
 - Use the project's designated environment/runtime when executing commands, including tests
 </context-requirements>
@@ -56,6 +56,39 @@
 - Add discovered sub-tasks/TODOs to `TASK.md` under "Discovered During Work" section
 - Request feedback before moving to next feature task
 </tracking>
+
+<task-list-maintenance>
+<update-protocol>
+- Update task list as you work through implementation
+- Mark tasks and subtasks as completed ([x]) following completion protocol
+- Add new tasks as they emerge during development
+- Regularly update after finishing any significant work
+</update-protocol>
+
+<completion-protocol>
+- Mark each finished sub-task with [x]
+- Mark parent task [x] only once ALL its subtasks are [x]
+- Before starting work, check which sub-task is next
+- After implementing a sub-task, update the file and pause for user approval
+</completion-protocol>
+
+<relevant-files-maintenance>
+- Maintain "Relevant Files" section accuracy throughout development
+- List every file created or modified during implementation
+- Give each file a one-line description of its purpose
+- Keep descriptions current as file purposes evolve
+</relevant-files-maintenance>
+
+<ai-task-instructions>
+When working with task lists, the AI must:
+- Regularly update the task list file after finishing any significant work
+- Follow the completion protocol exactly as specified above
+- Add newly discovered tasks as they emerge
+- Keep "Relevant Files" section accurate and up to date
+- Before starting work, check which sub-task is next
+- After implementing a sub-task, update the file and pause for user approval
+</ai-task-instructions>
+</task-list-maintenance>
 </task-completion>
 
 <style-conventions>
